@@ -1,0 +1,12 @@
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/bin/Debug/net7.0/Toro.Domain.deps.json
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/bin/Debug/net7.0/Toro.Domain.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/bin/Debug/net7.0/Toro.Domain.pdb
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.AssemblyInfoInputs.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.AssemblyInfo.cs
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.csproj.CoreCompileInputs.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/refint/Toro.Domain.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.pdb
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/ref/Toro.Domain.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Domain/obj/Debug/net7.0/Toro.Domain.csproj.AssemblyReference.cache

@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Controllers\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.8.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Configurations\ApiConfig.cs" />
+    <Compile Remove="Configurations\ApplicationDbContextConfig.cs" />
+    <Compile Remove="Configurations\DepedencyInjectionConfig.cs" />
+    <Compile Remove="Configurations\Settings\AppSettings.cs" />
+    <Compile Remove="Configurations\Settings\ConnectionStringsSettings.cs" />
+    <Compile Remove="Configurations\Settings\JwtSettings.cs" />
+    <Compile Remove="Data\Contexts\ApplicationDbContext.cs" />
+    <Compile Remove="Data\Repositories\Base\GenericRepository.cs" />
+    <Compile Remove="Data\Repositories\Base\Uow.cs" />
+    <Compile Remove="Migrations\20240928151048_AddTable.cs" />
+    <Compile Remove="Migrations\20240928151048_AddTable.Designer.cs" />
+    <Compile Remove="Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20240928213750_AddAccountID.cs" />
+    <Compile Remove="Migrations\20240928213750_AddAccountID.Designer.cs" />
+    <Compile Remove="Migrations\20240928224258_AddFK.cs" />
+    <Compile Remove="Migrations\20240928224258_AddFK.Designer.cs" />
+    <Compile Remove="Migrations\20240928224807_AddAccountNull.cs" />
+    <Compile Remove="Migrations\20240928224807_AddAccountNull.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toro.Infra.IoC\Toro.Infra.IoC.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

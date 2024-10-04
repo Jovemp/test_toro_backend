@@ -1,0 +1,17 @@
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.csproj.AssemblyReference.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.AssemblyInfoInputs.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.AssemblyInfo.cs
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.csproj.CoreCompileInputs.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Infra.Data.deps.json
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Infra.Data.runtimeconfig.json
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Infra.Data.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Infra.Data.pdb
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Domain.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/bin/Debug/net7.0/Toro.Domain.pdb
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/refint/Toro.Infra.Data.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.pdb
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.genruntimeconfig.cache
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/ref/Toro.Infra.Data.dll
+/Volumes/Dados/Projetos/Test_Toro_Invest/Toro.Infra.Data/obj/Debug/net7.0/Toro.Infra.Data.csproj.CopyComplete

@@ -1,0 +1,77 @@
+﻿version: '3.8'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672' # Porta para acessar o painel de administração
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_toro
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong!Passw0rd
+    ports:
+      - '1433:1433'
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools18/bin/sqlcmd -U sa -P YourStrong!Passw0rd -C -Q "SELECT 1" -b -o /dev/null
+      start_period: 10s
+      timeout: 2s
+      interval: 30s
+      retries: 3
+
+  mssqltools:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    volumes:
+      - ./init.sql:/init.sql
+    command: /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P YourStrong!Passw0rd -i /init.sql
+
+
+  toroapi:
+    build:
+      context: .
+      dockerfile: Dockerfile_Api 
+    container_name: toroapi
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=toro-db;User=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
+      Jwt__Secret: "TEST"
+      Jwt__Issuer: "TEST"
+      Jwt__Audience: "TEST"
+      Jwt__Expiration: 0
+      HostRabbitMq: "amqp://guest:guest@rabbitmq"
+      UseInMemoryDatabase: "false" 
+    ports:
+      - '8080:80'
+
+  toroprocessor:
+    build:
+      context: .
+      dockerfile: Dockerfile_Service
+    container_name: toroprocessor
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      Jwt__Secret: "TEST"
+      Jwt__Issuer: "TEST"
+      Jwt__Audience: "TEST"
+      Jwt__Expiration: 0
+      HostRabbitMq: "amqp://guest:guest@rabbitmq"
+      UseInMemoryDatabase: "false" 
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=toro-db;User=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
+
+volumes:
+  sqlserverdata:

@@ -1,0 +1,16 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+
+COPY ["Toro.Service.Processor/Toro.Service.Processor.csproj", "Toro.Service.Processor/"]
+RUN dotnet restore "Toro.Service.Processor/Toro.Service.Processor.csproj"
+
+COPY . .
+WORKDIR "/src/Toro.Service.Processor"
+RUN dotnet publish -c Release -o /app
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+WORKDIR /app
+COPY --from=build /app .
+
+
+ENTRYPOINT ["dotnet", "Toro.Service.Processor.dll"]

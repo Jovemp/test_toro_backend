@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toro.Application\Toro.Application.csproj" />
+    <ProjectReference Include="..\Toro.Domain\Toro.Domain.csproj" />
+    <ProjectReference Include="..\Toro.Infra.Data\Toro.Infra.Data.csproj" />
+  </ItemGroup>
+</Project>
